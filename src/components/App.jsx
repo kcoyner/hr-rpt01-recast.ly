@@ -9,18 +9,17 @@ class App extends React.Component {
     this.setState({currentVid: clickedVideo});
   }
 
-
   render () {
     return (
-    <div>
-      <Nav />
-      <div className="col-md-7">
-        <VideoPlayer video={this.state.currentVid} />
+      <div>
+        <Nav />
+        <div className="col-md-7">
+          <VideoPlayer video={this.state.currentVid} />
+        </div>
+        <div className="col-md-5">
+          <VideoList videos={this.state.videoList} clickHandler={this.onVideoListEntryClick} />
+        </div>
       </div>
-      <div className="col-md-5">
-        <VideoList videos={this.state.videoList} clickHandler={this.onVideoListEntryClick} />
-      </div>
-    </div>
     );
   }
 
