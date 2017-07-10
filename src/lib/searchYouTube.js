@@ -5,7 +5,6 @@ var searchYouTube = (options, callback) => {
 window.searchYouTube = searchYouTube;
 
 
-//
 
 // var settings = {
 //       url: https://www.googleapis.com/youtube/v3/search,
