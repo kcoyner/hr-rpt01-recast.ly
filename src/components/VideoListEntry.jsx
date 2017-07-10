@@ -1,20 +1,12 @@
 var VideoListEntry = (props) => (
 
-// one video object
-// fill in src tag for passed in video
-// fill in title for passed in video
-// fill in desc for passed in video
-
-
   <div className="video-list-entry">
     <div className="media-left media-middle">
       <img className="media-object" src={props.video.snippet.thumbnails.default.url} alt="" />
     </div>
 
-{console.log(props)}
-
     <div className="media-body">
-      <div onClick={props.clickHandler(props.video)} className="video-list-entry-title">{props.video.snippet.title}</div>
+      <div onClick={() => props.clickHandler(props.video)} className="video-list-entry-title">{props.video.snippet.title}</div>
 
       <div className="video-list-entry-detail">{props.video.snippet.description}</div>
     </div>
@@ -31,4 +23,5 @@ VideoListEntry.propTypes = {
 // In the ES6 spec, files are "modules" and do not share a top-level scope
 // `var` declarations will only exist globally where explicitly defined
 window.VideoListEntry = VideoListEntry;
+
 
