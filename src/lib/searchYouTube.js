@@ -1,19 +1,25 @@
+//import window.YOUTUBE_API_KEY from "../config/youtube.js";
+
 var searchYouTube = (options, callback) => {
 
 };
 
 window.searchYouTube = searchYouTube;
 
+var settings = {
+  url: 'https://www.googleapis.com/youtube/v3/search',
+  method: 'GET',
+  data: {maxResults: 5, part: 'snippet', key: 'AIzaSyDuR1apyail37bXQBpjzz75x1FSeOuy95o', q: 'surfing'},
+  success: function(data) {
+    console.log(data);
+  },
+  error: function() {
+    // See: https://developer.mozilla.org/en-US/docs/Web/API/console.error
+    console.error('recast.ly: Failed to get videos');
+  }
+};
 
-
-// var settings = {
-//       url: https://www.googleapis.com/youtube/v3/search,
-//       method: 'GET',
-//       data: encodeURI('maxResults=5', 'part=snippet', ''),
-//       complete: callback(data)
-//     };
-
-//     var test = $.ajax(settings);
+var test = $.ajax(settings);
 
 
 
@@ -27,5 +33,26 @@ window.searchYouTube = searchYouTube;
 // Only GET embeddable videos
 
 
-// GET https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=surfing&key={YOUR_API_KEY}
+// // GET https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=surfing&key={YOUR_API_KEY}
+// //
+// app.fetch = function() {
+//   $.ajax({
+//     url: app.server,
+//     type: 'GET',
+//     data: where = {
+//       'order': '-createdAt',
+//       'limit': '15'
+//     },
+//     contentType: 'application/json',
+//     success: function(data) {
+//       console.log(data);
+//       app.renderDropDown(data);
+//       app.renderMessage(data);
+//     },
+//     error: function() {
+//       // See: https://developer.mozilla.org/en-US/docs/Web/API/console.error
+//       console.error('chatterbox: Failed to get message');
+//     }
+//   });
+// };
 

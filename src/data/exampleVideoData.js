@@ -44,7 +44,7 @@ window.exampleVideoData = [{
     publishedAt: '2014-08-08T21:31:58.000Z',
     channelId: 'UCKKQaFUwyPb6iC-42rFRz2Q',
     title: 'Thinking in React, a step by step screencast tutorial',
-    description: 'A step by step video tutorial that takes you through the correct way of coding Facebook React views. Check out the rest of the tagtree library: http://tagtree.tv.',
+    description: 'A step by step video tutorial that takes you through the correct way of coding Facebook React views. Check out the rest of the tagtree library: https://tagtree.tv.',
     thumbnails: {
       default: {
         url: 'https://i.ytimg.com/vi/mFEoarLnnqM/default.jpg',
@@ -76,7 +76,7 @@ window.exampleVideoData = [{
     publishedAt: '2015-12-08T20:51:18.000Z',
     channelId: 'UClLXKYEEM8OBBx85DOa6-cg',
     title: 'React Tutorial for Beginners',
-    description: 'Get the full course here: http://devslopes.com/react In this video you will learn how to setup your project for React development and you will build a simple React ...',
+    description: 'Get the full course here: https://devslopes.com/react In this video you will learn how to setup your project for React development and you will build a simple React ...',
     thumbnails: {
       default: {
         url: 'https://i.ytimg.com/vi/0ByoQm-vnYw/default.jpg',
