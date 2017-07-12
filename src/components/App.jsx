@@ -1,9 +1,15 @@
+const key = window.YOUTUBE_API_KEY;
+
 class App extends React.Component {
   constructor (props) {
     super(props);
-    this.state = {currentVid: {}, videoList: [] };
+    this.state = {currentVid: null, videoList: [] };
+    // this.state = {currentVid: exampleVideoData[0], videoList: [] };
     this.onVideoListEntryClick = this.onVideoListEntryClick.bind(this);
-    props.searchYouTube({max: 10, query: 'react', key: window.YOUTUBE_API_KEY}, function(data) { console.log('searching!' + data); });
+    searchYouTube({max: 1, query: 'react', key: key}, function(data) {
+      console.log('Search results YouTube data:' + data);
+      this.setState({ videoList: data, currentVid: videoList[0] });
+    });
   }
 
   componentDidMount () {
