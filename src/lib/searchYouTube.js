@@ -1,20 +1,30 @@
 var searchYouTube = (options, callback) => {
+  var settings = {
+    url: 'https://www.googleapis.com/youtube/v3/search',
+    method: 'GET',
+    data: {
+      'maxResults': options.max,
+      'q': options.query,
+      'key': options.key,
+      'part': 'snippet',
+      'videoEmbeddable': true,
+      'type': 'video'
+    },
+
+    complete: function(data) {
+      callback(data.responseJSON.items);
+    }
+
+  };
+  $.ajax(settings);
 
 };
+
+
 
 window.searchYouTube = searchYouTube;
 
 
-//
-
-// var settings = {
-//       url: https://www.googleapis.com/youtube/v3/search,
-//       method: 'GET',
-//       data: encodeURI('maxResults=5', 'part=snippet', ''),
-//       complete: callback(data)
-//     };
-
-//     var test = $.ajax(settings);
 
 
 
@@ -29,4 +39,3 @@ window.searchYouTube = searchYouTube;
 
 
 // GET https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=surfing&key={YOUR_API_KEY}
-
