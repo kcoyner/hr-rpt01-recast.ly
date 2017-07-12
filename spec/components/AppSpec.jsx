@@ -73,4 +73,3 @@ describe('App', function() {
 
   });
 });
-
